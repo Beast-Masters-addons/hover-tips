@@ -295,7 +295,9 @@ end
 
 local function OnHyperlinkLeave(frame, ...)
 	GameTooltip:Hide()
-	BattlePetTooltip:Hide()
+	if _G.WOW_PROJECT_ID == _G.WOW_PROJECT_MAINLINE then
+		BattlePetTooltip:Hide()
+	end
 	if orig2[frame] then return orig2[frame](frame, ...) end
 end
 
