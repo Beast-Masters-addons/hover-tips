@@ -283,6 +283,8 @@ local function OnHyperlinkEnter(frame, link, ...)
 			ShowJournalTooltip(frame, linkContent);
 		elseif (linkType == "battlepet") then
 			ShowBattlePetTooltip(frame, linkContent)
+		elseif linkType == "quest" then
+			return
 		elseif linkTypes[linkType] then
 			GameTooltip:SetOwner(frame, "ANCHOR_TOPLEFT")
 			GameTooltip:SetHyperlink(link)
